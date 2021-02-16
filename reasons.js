@@ -1,8 +1,8 @@
 const reasons = [
     "Para saber lo que te espera el próximo mes",
-    "Para aprender con eventos pasados",
+    "Para aprender de eventos pasados",
     "Para entenerarte de lo que hacen nuestras comunidades",
-    "Para conocer mejor Women Techmakers"
+    "Para conocer mejor a Women Techmakers"
 ]
 
 function randomText(reasons) {

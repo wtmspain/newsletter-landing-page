@@ -69,17 +69,59 @@ table {
   width: 80%;
   max-height: 100vh;
   background-color: var(--main-background-color);
+  display: grid;
+  place-items: center;
 }
 
 .claim {
-  font-size: 2em;
+  font-size: 3em;
   margin-bottom: .5em;
+  margin-top: 1em;
   color: #fff;
+  line-height: 1.1;
+  letter-spacing: 1.3px;
+  text-align: center;
 }
 
-.sub-claim {
-  margin-bottom: 6em;
-  padding: 0 2em;
+.text {
+  margin-top: 1em;
+  font-size: 24px;
+  line-height: 1.2;
+  text-align: center;
+  color: #464444;
+ }
+
+.form {
+  height: 150px;
+}
+
+.form-elements {
+  display: flex;
+  flex-direction: column;
+  height: 40px;
+}
+
+.button {
+  border-radius: 3em;
+  margin-left: 60%;
+  margin-top: 3em;
+  padding: 0.7em 1.2em .7em 1.2em;
+  border: none;
+  background-color: #1CE8B5;
+  letter-spacing: .5px;
+  -moz-box-shadow: 1px 7px 15px 0px rgba(0,0,0,0.65);
+  -webkit-box-shadow: 1px 7px 15px 0px rgba(0,0,0,0.65); 
+  box-shadow: 1px 7px 15px 0px rgba(0,0,0,0.65);
+}
+
+input[type="email" i] {
+ height: 100%;
+ border: none;
+ width: 222px;
+ margin-top: 1em;
+ -moz-box-shadow: 1px 7px 15px 0px rgba(0,0,0,0.65);
+  -webkit-box-shadow: 1px 7px 15px 0px rgba(0,0,0,0.65); 
+  box-shadow: 1px 7px 15px 0px rgba(0,0,0,0.65);
 }
 
 @media (min-width: 25em) and (orientation: landscape) {
@@ -90,8 +132,8 @@ table {
  }
 
  .image {
-  grid-column: 3 / 5;
-  width: 40%;
+  grid-column: 2 / 5;
+  width: 20%;
  }
 
  .claim {
@@ -107,53 +149,16 @@ table {
   grid-column: 2 / 5;
  }
 
- .sub-claim {
-  grid-column: 2 / 5;
-  color: #fff;
-  text-align: center;
-  font-size: 14px;
- }
-
  .text {
-   text-align: center;
-   margin-bottom: 2em;
- }
-
- .subscription {
-   margin: 1em;
- }
-
- .form {
-   display: flex;
-   justify-content: center;
- }
-
- .form-elements {
-   display: flex;
-   flex-direction: row;
-   height: 40px;
- }
-
- .button {
-   border-radius: 3em;
-   margin-left: 2em;
-   padding: 0.7em 1.2em .7em 1.2em;
-   border: none;
-   background-color: #1CE8B5;
-   letter-spacing: .5px;
- }
-
- input[type="email" i] {
-  height: 75%;
-  border: none;
-  width: 200px;
-  -moz-box-shadow:    10px 1px 3px 4px #4b4b4b;
-  -webkit-box-shadow: 10px 1px 3px 4px #4b4b4b;
-  box-shadow:         -1px 1px 3px 4px #4b4b4b;
+   grid-column: 1 / 6;
+   margin-top: 0;
  }
 }
 
 @media (min-width: 48em) {
+  .container {
+    padding-top: 9em;
+  }
   .claim {
         font-size: calc(1rem + ((1vw - 0.01em) * 2.1277));
   }
@@ -166,8 +171,41 @@ table {
 }
 
 @media (min-width: 64em) { 
+  .container {
+    padding-top: 3em;
+  }
+
+  .image {
+    grid-column: 2 / 6;
+    width: 26%;
+  }
+
   .claim {
-    font-size: calc(1rem + ((1vw - 0.01em) * 1.5873));
+    grid-column: 2 / 6;
+    font-size: calc(1rem + ((1vw - 0.01em) * 3.5873));
+  }
+
+  .subscription {
+    grid-column: 2 / 6;
+  }
+
+  .form-elements {
+    flex-direction: row;
+    margin-top: 2em;
+  }
+
+  .form {
+    height: 132px;
+  }
+
+  .button {
+    padding: 1em 2.2em 1em 2.2em;
+    margin-top: 1em;
+    margin-left: 32%;
+  }
+
+  .text {
+    grid-column: 2 / 6;
   }
 }
 
@@ -178,38 +216,49 @@ table {
 }
 
 @media (min-width: 90em) {
-  .sub-claim {
-    
+  .image {
+    grid-column: 2 / 10;
+    width: 17%;
   }
 
-  .image {
-    grid-column: 5 / 12;
-    width: 34%;
-    margin-top: 1em;
-   }
-  
-   .claim {
-    font-size: calc(2rem + ((1vw - 0.01em) * 1.1236));
-     grid-column: 3 / 10;
+  .claim {
+    font-size: calc(2rem + ((1vw - 0.01em) * 2.1236));
+     grid-column: 2 / 10;
      text-align: center;
      margin-top: 1em;
    }
+
   
-   .text {
-    grid-column: 3 / 10;
+  .text {
+    grid-column: 2 / 10;
     margin-top: 2em;
-    font-size: 20px;
+    font-size: 24px;
    }
   
-   .subscription {
-    grid-column: 3 / 10;
+  .subscription {
+    grid-column: 2 / 10;
+   }
+}
+
+@media (min-width: 100em) {
+  .image {
+    grid-column: 2 / 11;
+    width: 17%;
+  }
+
+  .claim {
+    grid-column: 2 / 11;
+   }
+
+  
+  .text {
+    grid-column: 2 / 11;
+    margin-top: 2em;
+    font-size: 24px;
    }
   
-   .sub-claim {
-    grid-column: 3 / 10;
-    text-align: center;
-    font-size: 14px;
-    margin-top: 0;
-    color: #fff;
+  .subscription {
+    grid-column: 2 / 11;
    }
+
 }
