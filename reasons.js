@@ -1,18 +1,19 @@
 const reasons = [
-    "Para saber lo que te espera el próximo mes",
-    "Para aprender de eventos pasados",
-    "Para entenerarte de lo que hacen nuestras comunidades",
-    "Para conocer mejor a Women Techmakers"
+    "Para saber lo qué pasa el próximo mes",
+    "Para aprender de eventos que te perdiste",
+    "Para enterarte de lo que está pasando en la comunidad",
+    "Para conocer mejor a Women Techmakers",
+    "Para conocer a otras comunidades amigas"
 ]
 
-function randomText(reasons) {
-    return reasons[Math.floor((Math.random() * 3.99))];
+function setRandomReason() {
+    const reason = reasons[Math.floor(reasons.length * Math.random())];
+    const randomReasons = document.getElementById("random-reasons")
+    randomReasons.innerText = reason
+
 }
 
-
-
 document.addEventListener("DOMContentLoaded", function() {
-    const randomReasons = document.getElementById("random-reasons")
-    randomReasons.innerText = randomText(reasons)
-    
+    setRandomReason()
+    setInterval(setRandomReason, 3000)
   });

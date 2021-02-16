@@ -254,7 +254,7 @@ input[type="email" i] {
   .text {
     grid-column: 2 / 11;
     margin-top: 2em;
-    font-size: 24px;
+    font-size: 26px;
    }
   
   .subscription {
